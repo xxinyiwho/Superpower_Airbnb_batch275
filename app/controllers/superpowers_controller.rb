@@ -1,5 +1,5 @@
 class SuperpowersController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: :index
   before_action :find, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -15,6 +15,7 @@ class SuperpowersController < ApplicationController
 
   def create
     @superpower = Superpower.new(superpower_strong_params)
+    @superpower.user = current_user
     if @superpower.save
       redirect_to superpower_path(@superpower)
     else
@@ -45,6 +46,6 @@ class SuperpowersController < ApplicationController
   end
 
   def superpower_strong_params
-    params.require(:superpowers).permit(:name, :description, :price, :address)
+    params.require(:superpower).permit(:name, :description, :price, :address, :photo)
   end
 end
