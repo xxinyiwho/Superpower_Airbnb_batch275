@@ -1,15 +1,11 @@
 class SuperpowersController < ApplicationController
 
   before_action :find, only: [:show, :edit, :update, :destroy]
-
+  
   def index
-    @superpowers = Superpower.all
+    # @superpowers = Superpower.all
   end
-
-  def show
-    # find method
-  end
-
+  
   def new
     @superpower = Superpower.new
   end
