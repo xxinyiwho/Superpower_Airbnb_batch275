@@ -1,6 +1,6 @@
 class SuperpowersController < ApplicationController
 
-  before_action :find
+  before_action :find, only: [:show, :edit, :update, :destroy]
 
   def index
     @superpowers = Superpower.all
@@ -46,5 +46,6 @@ class SuperpowersController < ApplicationController
   end
 
   def superpower_strong_params
-    params.require(:superpowers).permit(:name, :description, :price, :photo, :address)
+    params.require(:superpowers).permit(:name, :description, :price, :address)
+  end
 end
