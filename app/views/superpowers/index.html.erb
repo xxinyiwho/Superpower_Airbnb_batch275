@@ -1,11 +1,12 @@
 
+
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://acdn.list25.com/wp-content/uploads/2012/05/superpowers-you-wish-you-had.jpg);">
   <div class="container">
     <h1>Superpowers available</h1>
   </div>
   <div class="container">
   <div class="cards">
-    <% Superpower.all.each do |superpower| %>
+    <% @superpowers.each do |superpower| %>
       <div class="card-product">
         <%#= cl_image_tag superpower.photo %>
           <%= link_to superpower.name, superpower_path(superpower) %>
@@ -18,7 +19,5 @@
 </div>
 
   <%#= link_to "Create a new superpower", new_superpower_path, class: "btn btn-primary" %>
-
-
 
 
