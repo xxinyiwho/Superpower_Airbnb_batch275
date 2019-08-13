@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # get 'superpowers/index'
   root to: 'pages#home'
 
+  devise_for :users
   resources :superpowers, only: [ :index, :new, :create, :show, :destroy] do
     resources :bookings, only: [:new, :create]
   end
