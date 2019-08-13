@@ -4,7 +4,7 @@
   <div class="banner">
 <h2><%= @superpower.name  %></h2>
 </div>
-  <%= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
+
   <br>
 <% @superpowers.each do |power| %>
 <p><%= power.description %></p>
