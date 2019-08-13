@@ -1,6 +1,7 @@
 
 <div class=“container”>
- <div class=“banner”>
+ <div class=“banner-show” style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+url('<%= cl_image_path @superpower.photo.url, height: 800, width: 1080, crop: :fill %>')">
    <h2><%= @superpower.name  %></h2>
  </div>
  <br>
@@ -8,5 +9,5 @@
  <p><%= @superpower.address %></p>
  <p><%= @superpower.price %></p>
 </div>
-<%= link_to “Delete superpower”, superpower_path(@superpower), method: :delete, data: { confirm: ‘are you sure?’ }, class: “btn btn-info” %></p>
-<h4><%= link_to “Back to the list”, superpowers_path, class: “btn btn-primary” %></h4>
+<%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-info" %>
+<h4><%= link_to "Back to the list", root_path, class: "btn btn-primary" %></h4>
