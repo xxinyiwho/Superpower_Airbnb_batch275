@@ -1,2 +1,23 @@
-<h1>Superpowers#show</h1>
+
 <p>Find me in app/views/superpowers/show.html.erb</p>
+<div class="container">
+  <div class="banner">
+<h2><%= @superpower.name  %></h2>
+</div>
+  <%= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
+  <br>
+<% @superpowers.each do |power| %>
+<p><%= power.description %></p>
+<p><%= power.address %></p>
+<p><%= power.price %></p>
+<% end %>
+
+<h4><%= link_to "Rent this superpower", new_superpower_booking_path, class: "btn btn-primary" %></h4>
+</div>
+
+<%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: 'are you sure?'}, class: "btn btn-info" %></p>
+
+
+
+<h4><%= link_to "Back to the list", superpowers_path, class: "btn btn-primary" %></h4>
+</div>

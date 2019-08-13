@@ -3,5 +3,6 @@ class SuperpowersController < ApplicationController
   end
 
   def index
+    # @superpowers = Superpower.all
   end
 end
