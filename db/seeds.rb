@@ -16,8 +16,8 @@ user = User.create!(email: "xinyi@gmail.com", password: "password")
 
 Superpower.create!(
   name: "Fly",
-  description: "Fly me to the sky",
   price: 100,
+  description: "Fly me to the moon",
   user: user,
   remote_photo_url: "https://i1.wp.com/metro.co.uk/wp-content/uploads/2014/10/skydive-exit-dive.jpg?quality=90&strip=all&zoom=1&resize=644%2C428&ssl=1"
   )
