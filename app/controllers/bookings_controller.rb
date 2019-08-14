@@ -23,7 +23,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_strong_params
-    params.require(:booking).permit (:start_date, :end_date, :start_date, :status, :superpower_id, :user_id)
+    params.require(:booking).permit(:start_date, :end_date, :start_date, :status, :superpower_id, :user_id)
   end
 
 end

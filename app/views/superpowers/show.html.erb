@@ -1,13 +1,32 @@
 
-<div class=“container”>
- <div class=“banner-show” style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
-url('<%= cl_image_path @superpower.photo.url, height: 800, width: 1080, crop: :fill %>')">
-   <h2><%= @superpower.name  %></h2>
+
+  <div class="navbar sticky-top navbar-lewagon">
+    <%= link_to "Home", root_path, class: "btn btn-light" %>
+    <%= link_to "Post your superpower", new_superpower_path, class: "btn btn-primary" %>
+  </div>
+
+ <div id="banner-show-override" class=“banner-show” style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :fill %>')">
  </div>
+
  <br>
+ <div class="container">
+ <div class="content">
+<div class="info within-content">
+ <h2 class="powername"><%= @superpower.name  %></h2>
  <p><%= @superpower.description %></p>
- <p><%= @superpower.address %></p>
  <p><%= @superpower.price %></p>
+ <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "delete-button" %>
+ <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
+ </div>
+   <div class="booking-form within-content banner-content">
+      <h3>Book your superpower and be magical today!</h3>
+      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+        <%= f.input :keyword, label: "What superpower you are looking for?" %>
+        <%= f.input :start_date, as: :date %>
+        <%= f.input :end_date, as: :date %>
+        <%= f.submit "search", class: "btn btn-primary" %>
+      <% end %>
+   </div>
+ </div>
 </div>
-<%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-info" %>
-<h4><%= link_to "Back to the list", root_path, class: "btn btn-primary" %></h4>

@@ -1,0 +1,38 @@
+// .powername{
+//   padding-top: 20px;
+// }
+
+.delete-button{
+  text-decoration: none;
+  color: black;
+}
+
+.delete-button:hover{
+  color: black;
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.content{
+ display: flex;
+ justify-content: space-evenly;
+}
+
+.within-content {
+      padding-left: 76px;
+    padding-right: 76px;
+}
+
+.booking-form{
+  flex-grow: 1;
+  width: 300px;
+}
+
+.info{
+  width: 582px;
+}
+
+
+  // margin-top: 2px;
+  // margin-left: 28px;
+  // padding-bottom: 30px;
