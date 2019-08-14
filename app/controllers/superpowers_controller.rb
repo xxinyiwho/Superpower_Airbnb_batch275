@@ -1,33 +1,33 @@
 class SuperpowersController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
-  before_action :find, only: [:show, :edit, :update, :destroy]
+ skip_before_action :authenticate_user!, only: [:index, :show]
+ before_action :find, only: [:show, :edit, :update, :destroy]
 
-  def index
-    if params[:search][:keyword].present?
-      @superpowers = Superpower.where("name ILIKE ?", "%#{params[:search][:keyword]}%")
-    else
-      @superpowers = Superpower.all
-    end
+ def index
+  if params[:search][:keyword].present?
+    @superpowers = Superpower.where("name ILIKE ?", "%#{params[:search][:keyword]}%")
+  else
+    @superpowers = Superpower.all
   end
+end
 
-  def show
+def show
+end
+
+def new
+  @superpower = Superpower.new
+end
+
+def create
+  @superpower = Superpower.new(superpower_strong_params)
+  @superpower.user = current_user
+  if @superpower.save
+    redirect_to superpower_path(@superpower)
+  else
+    render :new
   end
+end
 
-  def new
-    @superpower = Superpower.new
-  end
-
-  def create
-    @superpower = Superpower.new(superpower_strong_params)
-    @superpower.user = current_user
-    if @superpower.save
-      redirect_to superpower_path(@superpower)
-    else
-      render :new
-    end
-  end
-
-  def edit
+def edit
     # find method
   end
 
