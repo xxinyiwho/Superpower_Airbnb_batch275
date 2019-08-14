@@ -1,7 +1,10 @@
 <div class="banner">
   <div class="navbar sticky-top">
-    <%= link_to "Home", root_path, class: "btn btn-light" %>
-    <%= link_to "Post your superpower", new_superpower_path, class: "btn btn-primary" %>
+    <%= link_to "Home", root_path %>
+    <ul>
+      <li><%= link_to "Create new", new_superpower_path %></li>
+      <li><%= link_to "Log in", new_user_session_path %></li>
+    </ul>
   </div>
 
   <div class="container">
