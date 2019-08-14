@@ -8,7 +8,7 @@ url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :
 <div class="info within-content banner-content" id="background-color-is">
  <h2 class="powername"><%= @superpower.name  %></h2>
  <p><%= @superpower.description %></p>
- <p><%= @superpower.price %></p>
+ <p><%= @superpower.price %>€/day</p>
  <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "delete-button" %>
  <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
  </div>
