@@ -39,7 +39,7 @@ Superpower.create!(
   name: "Invisibility",
   description: "Go everywhere without being found out",
   user: user,
-  remote_photo_url: "https://www.synttarikuningas.fi/pub_images/original/pippi1400x500.jpg"
+  remote_photo_url: "https://cosmos-production-assets.s3.amazonaws.com/file/spina/photo/2496/191015_invisibility_P.jpg"
   )
 
 Superpower.create!(
@@ -60,7 +60,7 @@ Superpower.create!(
   name: "Teleporting",
   description: "Going to school in 1 second is tight!",
   user: user,
-  remote_photo_url: "https://cosmos-production-assets.s3.amazonaws.com/file/spina/photo/2496/191015_invisibility_P.jpg"
+  remote_photo_url: "https://unity3d.college/wp-content/uploads/2017/05/SteamVR-Teleportation-Featured.jpg"
   )
 
 
