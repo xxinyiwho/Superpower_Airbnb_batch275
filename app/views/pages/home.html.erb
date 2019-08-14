@@ -14,34 +14,11 @@
         <%= f.input :keyword, label: "What superpower you are looking for?" %>
         <%= f.input :start_date, as: :date %>
         <%= f.input :end_date, as: :date %>
+        <%= f.submit "see all power", class: "btn btn-outline-primary" %>
         <%= f.submit "search", class: "btn btn-primary" %>
       <% end %>
     </div>
 
-  </div>
-</div>
-
-  <!-- card -->
-  <div class="container">
-    <div class="cards">
-      <% @superpowers.each do |superpower| %>
-      <div class="card-product">
-        <div class="powerimg">
-        <% if superpower.photo.url %>
-        <%= cl_image_tag superpower.photo %>
-        <% end %>
-
-        </div>
-
-        <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
-        <div class="card-product-infos">
-          <%= link_to superpower.name, superpower_path(superpower) %>
-          <br>
-          <%= superpower.description %>
-        </div>
-      </div>
-      <% end %>
-    </div>
   </div>
 </div>
 
