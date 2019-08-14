@@ -1,20 +1,20 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
 .card-product {
+  height: 280px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
   align-items: center;
-}
-
-.card-product img {
-  height: 100%;
-  width: 120px;
+  img {
+  height: 180px;
+  width: 100%;
   object-fit: cover;
+  border-bottom: 2px solid #f4f4f4;
+ }
 }
 
 .card-product h2 {
@@ -48,7 +48,14 @@
   opacity: 0.1;
 }
 
+.card-product-infos a {
+  color: #293A47;
+}
 
+.card-product-infos a:hover {
+  text-decoration: none;
+  color: #5DC4F1;
+}
 
 
 

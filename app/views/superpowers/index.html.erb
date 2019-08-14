@@ -26,9 +26,12 @@
     <div class="cards">
       <% @superpowers.each do |superpower| %>
       <div class="card-product">
+        <div class="powerimg">
         <% if superpower.photo.url %>
         <%= cl_image_tag superpower.photo %>
         <% end %>
+
+        </div>
         <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
         <div class="card-product-infos">
           <%= link_to superpower.name, superpower_path(superpower) %>
