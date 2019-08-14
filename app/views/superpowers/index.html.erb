@@ -1,49 +1,26 @@
-<div class="banner">
-  <div class="navbar sticky-top">
-    <%= link_to "Home", root_path %>
-    <ul>
-      <li><%= link_to "Create new", new_superpower_path %></li>
-      <li><%= link_to "Log in", new_user_registration_path %></li>
-    </ul>
-  </div>
-
-  <div class="container">
-    <div class="banner-content">
-      <h3>Book your superpower and be magical today!</h3>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <%= f.input :keyword, label: "What superpower you are looking for?" %>
-        <%= f.input :start_date, as: :date %>
-        <%= f.input :end_date, as: :date %>
-        <%= f.submit "search", class: "btn btn-primary" %>
+<!-- card -->
+<div class="container">
+  <div class="cards">
+    <% @superpowers.each do |superpower| %>
+    <div class="card-product">
+      <div class="powerimg">
+      <% if superpower.photo.url %>
+      <%= cl_image_tag superpower.photo %>
       <% end %>
-    </div>
 
-  </div>
-</div>
-
-  <!-- card -->
-  <div class="container">
-    <div class="cards">
-      <% @superpowers.each do |superpower| %>
-      <div class="card-product">
-        <div class="powerimg">
-        <% if superpower.photo.url %>
-        <%= cl_image_tag superpower.photo %>
-        <% end %>
-
-        </div>
-
-        <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
-        <div class="card-product-infos">
-          <%= link_to superpower.name, superpower_path(superpower) %>
-          <br>
-          <%= superpower.description %>
-        </div>
       </div>
-      <% end %>
+
+      <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
+      <div class="card-product-infos">
+        <%= link_to superpower.name, superpower_path(superpower) %>
+        <br>
+        <%= superpower.description %>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
+
 
 
 <%#= link_to "Create a new superpower", new_superpower_path, class: "btn btn-primary" %>

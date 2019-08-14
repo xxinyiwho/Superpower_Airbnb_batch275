@@ -30,6 +30,9 @@ margin-top: 12px;
 .navbar a {
   color: white;
   padding: 12px;
+  &.special {
+    color: black;
+  }
 }
 
 .navbar a:hover {

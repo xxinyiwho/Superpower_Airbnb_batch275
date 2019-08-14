@@ -3,7 +3,11 @@ class SuperpowersController < ApplicationController
   before_action :find, only: [:show, :edit, :update, :destroy]
 
   def index
-    @superpowers = Superpower.all
+    if params[:search][:keyword].present?
+      @superpowers = Superpower.where("name ILIKE ?", "%#{params[:search][:keyword]}%")
+    else
+      @superpowers = Superpower.all
+    end
   end
 
   def show
@@ -38,6 +42,8 @@ class SuperpowersController < ApplicationController
     @superpower.destroy
     redirect_to root_path
   end
+
+
 
   private
 

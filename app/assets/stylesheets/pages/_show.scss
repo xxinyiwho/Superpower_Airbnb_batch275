@@ -19,8 +19,9 @@
 }
 
 .within-content {
-      padding-left: 76px;
+    padding-left: 76px;
     padding-right: 76px;
+    margin-bottom: 100px;
 }
 
 .booking-form{
@@ -32,6 +33,13 @@
   width: 582px;
 }
 
+#background-color-is {
+  background: #f4f4f4;
+}
+
+#navbar-button-override{
+  color: black;
+}
 
   // margin-top: 2px;
   // margin-left: 28px;
