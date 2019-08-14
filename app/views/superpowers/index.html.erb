@@ -10,11 +10,14 @@
 
       </div>
 
+
       <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
       <div class="card-product-infos">
         <%= link_to superpower.name, superpower_path(superpower) %>
         <br>
         <%= superpower.description %>
+        <br>
+         <%= superpower.price %>€/day
       </div>
     </div>
     <% end %>
