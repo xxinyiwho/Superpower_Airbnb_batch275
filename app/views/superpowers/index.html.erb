@@ -1,31 +1,34 @@
-<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://acdn.list25.com/wp-content/uploads/2012/05/superpowers-you-wish-you-had.jpg)">
- <div class="navbar sticky-top">
-   <%= link_to "Home", root_path, class: "btn btn-light" %>
-   <%= link_to "Post your superpower", new_superpower_path, class: "btn btn-primary" %>
- </div>
+<div class="banner">
+  <div class="navbar sticky-top">
+    <%= link_to "Home", root_path, class: "btn btn-light" %>
+    <%= link_to "Post your superpower", new_superpower_path, class: "btn btn-primary" %>
+  </div>
 
-<div class="container">
- <div class="banner">
-   <h1>Superpowers available</h1>
- </div>
- </div>
-</div>
-<div class="container">
-  <div class="cards">
-  <% @superpowers.each do |superpower| %>
-    <div class="card-product">
-    <% if superpower.photo.url %>
-      <%= cl_image_tag superpower.photo %>
-    <% end %>
-  <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
-    <div class="card-product-infos">
-      <%= link_to superpower.name, superpower_path(superpower) %>
-      <br>
-      <%= superpower.description %>
+  <div class="container">
+    <div class="banner-content">
+
     </div>
-   </div>
-  <% end %>
- </div>
+  </div>
+</div>
+
+  <!-- card -->
+  <div class="container">
+    <div class="cards">
+      <% @superpowers.each do |superpower| %>
+      <div class="card-product">
+        <% if superpower.photo.url %>
+        <%= cl_image_tag superpower.photo %>
+        <% end %>
+        <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
+        <div class="card-product-infos">
+          <%= link_to superpower.name, superpower_path(superpower) %>
+          <br>
+          <%= superpower.description %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 
