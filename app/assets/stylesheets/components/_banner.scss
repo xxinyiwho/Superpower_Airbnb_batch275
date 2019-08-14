@@ -1,46 +1,29 @@
-// .banner {
-//   background-size: cover;
-//   background-position: center;
-//   padding: 150px 0;
-// }
-
-// .banner h1 {
-//   margin: 0;
-//   color: white;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   font-size: 32px;
-//   font-weight: bold;
-// }
-
-// .banner p {
-//   font-size: 20px;
-//   color: white;
-//   opacity: .7;
-//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-// }
 
 
-.header {
+.banner {
  background-size: cover;
- height: 400px;
+ background-image: url("https://acdn.list25.com/wp-content/uploads/2012/05/superpowers-you-wish-you-had.jpg
+");
  background-position: center;
+ background-repeat: no-repeat;
+ height: 770px;
  margin-bottom: 30px;
+ position: relative;
 }
 
-.banner h1 {
- margin: 0;
- color: white;
- text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
- font-size: 32px;
- font-weight: bold;
- padding: 130px;
-}
-
-.banner p {
- font-size: 20px;
- color: white;
- opacity: .7;
- text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+.banner-content {
+  margin-top: 100px;
+  border: 1px;
+  border-radius: 4px;
+  width: 400px;
+  background-color: white;
+  padding: 25px;
+   form {
+    padding: 10px;
+  } h3 {
+    padding-bottom: 15px;
+    padding-top: 25px;
+  }
 }
 
 .banner-show {
@@ -54,3 +37,4 @@
  height: 500px;
  background-size: cover;
 }
+
