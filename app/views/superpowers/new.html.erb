@@ -1,11 +1,14 @@
-<div>
-<%= simple_form_for(@superpower) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.input :address %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.submit "create power", class: "btn btn-primary" %>
-<% end %>
+<div class="container">
+  <div class="signup" style="margin-top: 30px;">
+    <h3>Rent out your superpower!</h3>
+    <%= simple_form_for(@superpower) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :address %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit "create power", class: "btn btn-primary" %>
+    <% end %>
+  </div>
 </div>
