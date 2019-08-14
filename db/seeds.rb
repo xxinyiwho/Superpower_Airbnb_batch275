@@ -17,43 +17,50 @@ user = User.create!(email: "xinyi@gmail.com", password: "password")
 Superpower.create!(
   name: "Fly",
   description: "Fly me to the sky",
-  user: user
+  user: user,
+  remote_photo_url: "https://thumbs.dreamstime.com/z/superhero-flying-superman-vector-illustration-isolated-background-34647944.jpg"
   )
 
 Superpower.create!(
   name: "Throwing ball of fire",
   description: "Fire is hot baby",
-  user: user
+  user: user,
+  remote_photo_url: "https://imagevars.gulfnews.com/2018/11/21/181121_generic_fire_resources1_16a08520cf4_large.jpg"
   )
 
 Superpower.create!(
   name: "Ice",
   description: "Cold as your grandma",
-  user: user
+  user: user,
+  remote_photo_url: "https://p2d7x8x2.stackpathcdn.com/wordpress/wp-content/uploads/2019/02/Iceberg-istock-640x446.jpg"
   )
 
 Superpower.create!(
   name: "Invisibility",
   description: "Go everywhere without being found out",
-  user: user
+  user: user,
+  remote_photo_url: "https://www.synttarikuningas.fi/pub_images/original/pippi1400x500.jpg"
   )
 
 Superpower.create!(
   name: "Superstrenght",
   description: "Carry your car home!",
-  user: user
+  user: user,
+  remote_photo_url: "https://www.funkidslive.com/wp-content/uploads/2016/04/Hulk.jpg"
   )
 
 Superpower.create!(
   name: "Speak to animals",
   description: "Speak with your best buddy!",
-  user: user
+  user: user,
+  remote_photo_url: "https://images-na.ssl-images-amazon.com/images/I/6164ose4TgL._SX425_.jpg"
   )
 
 Superpower.create!(
   name: "Teleporting",
   description: "Going to school in 1 second is tight!",
-  user: user
+  user: user,
+  remote_photo_url: "https://cosmos-production-assets.s3.amazonaws.com/file/spina/photo/2496/191015_invisibility_P.jpg"
   )
 
 
