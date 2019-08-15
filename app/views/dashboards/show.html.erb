@@ -1,0 +1,39 @@
+<h1>my superpowers</h1>
+<% if @superpowers.nil? %>
+<%= link_to "Create a superpower", new_superpower_path %>
+<% else %>
+<div class="cards">
+    <% @superpowers.each do |superpower| %>
+    <div class="card-product">
+      <div class="powerimg">
+      <% if superpower.photo.url %>
+      <%= cl_image_tag superpower.photo %>
+      <% end %>
+      </div>
+      <div class="card-product-infos">
+        <%= link_to superpower.name, superpower_path(superpower) %>
+        <br>
+        <%= superpower.description %>
+        <br>
+         <%= superpower.price %>€/day
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <% end %>
+
+
+
+  <h1>my bookings</h1>
+  <% if @bookings.nil? %>
+    <%= link_to "Hey, do you want to rent a super power?", superpowers_path %>
+  <% else %>
+    <% @bookings.each do |b| %>
+      <h3><%=b.start_date %></h2>
+      <%= cl_image_tag b.superpower.photo, height: 300, width: 400, crop: :fill %>
+      <br>
+      <p>From<%= b.start_date%> to <%= b.end_date%></p>
+      <p>Price per day:<%= b.superpower.price%> </p>
+      <p>Total price: <%#=@booking.total_price%></p>
+    <% end %>
+  <% end %>
