@@ -1,41 +1,9 @@
-// .powername{
-//   padding-top: 20px;
-// }
-
-.navbar-all {
- flex-grow: 0;
- justify-content: space-between;
- align-items: start;
- display: flex;
- border-bottom: 1px solid #f1f1f1;
- padding: 8px 16px;
-}
-
-.navbar-all ul {
-  margin-top: 12px;
-
-}
-
-.navbar-all li {
+.editdelete li {
   display: inline;
-  text-decoration: none;
-  padding-left: 15px;
+text-decoration: none;
 }
 
-.navbar-all a {
-  color: black;
-  padding: 12px;
-  &.special {
-    color: black;
-  }
-}
 
-.navbar-all a:hover {
-  text-decoration: none;
-  background-color: #f4f4f4;
-  color: black;
-
-}
 
 .container-index {
   margin: 50px;
@@ -45,15 +13,17 @@
 .delete-button{
   text-decoration: none;
   // color: black;
-  margin-top: 35px;
-  padding: 10px;
+  margin-top: 30px;
+  padding: 0px;
 }
 
-.delete-button:hover{
-  color: black;
-  text-decoration: none;
-  opacity: 0.5;
-}
+// .delete-button:hover{
+//   color: black;
+//   text-decoration: none;
+//   opacity: 0.5;
+// }
+
+
 
 .content{
  display: flex;

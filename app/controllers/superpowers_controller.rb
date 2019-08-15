@@ -29,30 +29,28 @@ def create
 end
 
 def edit
-    # find method
-  end
+  # find method
+end
 
-  def update
-    # find method
-    @superpower.update(superpower_strong_params)
-    redirect_to superpower_path(@superpower)
-  end
+def update
+  # find method
+  @superpower.update(superpower_strong_params)
+  redirect_to superpower_path(@superpower)
+end
 
-  def destroy
-    # find method
-    @superpower.destroy
-    redirect_to root_path
-  end
+def destroy
+  # find method
+  @superpower.destroy
+  redirect_to root_path
+end
 
+private
 
+def find
+  @superpower = Superpower.find(params[:id])
+end
 
-  private
-
-  def find
-    @superpower = Superpower.find(params[:id])
-  end
-
-  def superpower_strong_params
-    params.require(:superpower).permit(:name, :description, :price, :address, :photo)
-  end
+def superpower_strong_params
+  params.require(:superpower).permit(:name, :description, :price, :address, :photo)
+end
 end
