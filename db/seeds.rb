@@ -70,14 +70,6 @@ Superpower.create!(
   remote_photo_url: "https://unity3d.college/wp-content/uploads/2017/05/SteamVR-Teleportation-Featured.jpg"
   )
 
-  Superpower.create!(
-  name: "Coding",
-  description: "All you need is code!",
-  price: 6000,
-  user: user,
-  remote_photo_url: "https://files.slack.com/files-pri/T02NE0241-FLT4598LC/image_from_ios.jpg"
-  )
-
 
 puts "Done"
 
