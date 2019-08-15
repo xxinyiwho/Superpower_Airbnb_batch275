@@ -1,5 +1,10 @@
 <div class="container">
-  <h2>Rent a superpower</h2>
+     <h3>Book your superpower and be magical today!</h3>
+      <%= simple_form_for [@superpower, @booking] do |f| %>
+        <%= f.input :start_date, as: :date %>
+        <%= f.input :end_date, as: :date %>
+        <%= f.submit "Book", class: "btn btn-primary" %>
+      <% end %>
 
 
 
