@@ -2,31 +2,37 @@
 url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :fill %>')">
 </div>
 
- <br>
- <div class="container">
+<br>
+<div class="container">
   <div class="content">
    <div class="info within-content banner-content-show margin-right-for-content" id="background-color-is">
     <div class="showpowername">
       <h1><%= @superpower.name  %></h1>
     </div>
-      <div class="showpowerprice">
-        <p><%= @superpower.price %> €/day</p>
-      </div>
-        <div class="showpowerparagraph">
-         <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
-        </div>
-      <br>
-      <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-outline-primary delete-button" %>
-   </div>
-    <div class="booking-form within-form banner-content-show margin-left-for-form sticky-top">
-      <h3>Book your superpower and be magical today!</h3>
-      <%= simple_form_for [@superpower, @booking] do |f| %>
-        <%= f.input :start_date, as: :date %>
-        <%= f.input :end_date, as: :date %>
-        <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block" %>
-      <% end %>
+    <div class="showpowerprice">
+      <p><%= @superpower.price %> €/day</p>
     </div>
- </div>
+    <div class="showpowerparagraph">
+     <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
+   </div>
+   <br>
+   <div class="editdelete">
+   <ul>
+    <li><%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-outline-primary delete-button" %></li>
+    <li><%= link_to "Edit", edit_superpower_path(@superpower), class: "btn" %></li>
+  </ul>
+
+   </div>
+</div>
+<div class="booking-form within-form banner-content-show margin-left-for-form">
+  <h3>Book your superpower and be magical today!</h3>
+  <%= simple_form_for [@superpower, @booking] do |f| %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date, as: :date %>
+  <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block" %>
+  <% end %>
+</div>
+</div>
 </div>
 
 
