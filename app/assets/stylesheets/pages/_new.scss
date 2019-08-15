@@ -1,4 +1,5 @@
-.flexible-form {
+
+.new_flexible-form {
     display: -webkit-box;
     display: flex;
     background-color: white;
@@ -6,7 +7,7 @@
     box-shadow: 5px 7px #8888880D;
  }
 
-.coloured-side {
+.new_coloured-side {
   padding: 120px 130px 0 120px;
   background-image: url("https://images.unsplash.com/photo-1531270794133-e17fd309885c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
   background-position: center;
@@ -14,27 +15,27 @@
   background-size: cover;
 }
 
-body {
+.new_body {
   background-color: #F8F8FF;
 }
 
-h3 {
+.new_h3 {
   width: 340px;
   font-size: 3.75rem;
 }
 
-.container {
+.new_container {
     margin-right: 50px;
     margin-left: 50px;
     width: 500px;
     padding: 55px 0px 10px 0px;
 }
 
-.form-group {
+.new_form-group {
   margin-bottom: 0px;
 }
 
-.input {
+.new_input {
   .form-control-file {
   border-color: black;
   }
