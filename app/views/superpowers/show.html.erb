@@ -1,24 +1,24 @@
 <div id="banner-show-override" class=“banner-show” style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
 url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :fill %>')">
- </div>
+</div>
 
- <br>
- <div class="container">
- <div class="content">
-<div class="info within-content banner-content" id="background-color-is">
- <h2 class="powername"><%= @superpower.name  %></h2>
- <p><%= @superpower.description %></p>
- <p><%= @superpower.price %>€/day</p>
- <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "delete-button" %>
- <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
+<br>
+
+<div class="content">
+  <div class="info within-content banner-content" id="background-color-is">
+   <h2 class="powername"><%= @superpower.name  %></h2>
+   <p><%= @superpower.description %></p>
+   <p><%= @superpower.price %>€/day</p>
+   <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "delete-button" %>
+   <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
  </div>
-   <div class="booking-form within-content banner-content">
-      <h3>Book your superpower and be magical today!</h3>
-      <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-        <%= f.input :start_date, as: :date %>
-        <%= f.input :end_date, as: :date %>
-        <%= f.submit "Book", class: "btn btn-primary" %>
-      <% end %>
-   </div>
- </div>
+ <div class="booking-form within-content banner-content">
+  <h3>Book your superpower and be magical today!</h3>
+  <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <%= f.input :start_date, as: :date %>
+  <%= f.input :end_date, as: :date %>
+  <%= f.submit "Book", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
 </div>
