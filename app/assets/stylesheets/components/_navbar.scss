@@ -3,6 +3,9 @@
  flex-grow: 0;
  justify-content: space-between;
  align-items: start;
+img {
+height: 40px;
+}
 }
 
 .navbar ul {
@@ -26,6 +29,44 @@ margin-top: 12px;
 .navbar a:hover {
   text-decoration: none;
   background-color: white;
+  color: black;
+
+}
+
+.navbar-all {
+ flex-grow: 0;
+ justify-content: space-between;
+ align-items: start;
+ display: flex;
+ border-bottom: 1px solid #f1f1f1;
+ padding: 8px 16px;
+ img {
+height: 40px;
+}
+}
+
+.navbar-all ul {
+  margin-top: 12px;
+
+}
+
+.navbar-all li {
+  display: inline;
+  text-decoration: none;
+  padding-left: 15px;
+}
+
+.navbar-all a {
+  color: black;
+  padding: 12px;
+  &.special {
+    color: black;
+  }
+}
+
+.navbar-all a:hover {
+  text-decoration: none;
+  background-color: #f4f4f4;
   color: black;
 
 }
