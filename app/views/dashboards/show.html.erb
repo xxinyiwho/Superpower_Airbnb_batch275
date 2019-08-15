@@ -1,6 +1,6 @@
 <h1>my superpowers</h1>
 <% if @superpowers.nil? %>
-<%= link_to "Create a superpower", new_superpower_path %>
+  <%= link_to "Create a superpower", new_superpower_path %>
 <% else %>
 <div class="cards">
     <% @superpowers.each do |superpower| %>
@@ -21,7 +21,6 @@
     <% end %>
   </div>
   <% end %>
-
 
 
   <h1>my bookings</h1>
