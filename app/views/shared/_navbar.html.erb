@@ -1,6 +1,8 @@
 
  <div class="navbar-all">
-    <%= link_to "Home", root_path %>
+    <%= link_to root_path do %>
+    <img src="https://static.thenounproject.com/png/2729312-200.png" alt="">
+    <% end %>
     <ul>
       <li><%= link_to "Create new", new_superpower_path %></li>
       <% if user_signed_in? %>
