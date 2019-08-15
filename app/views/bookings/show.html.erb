@@ -1,16 +1,19 @@
 <div class="container">
+  <div class="confirmation">
 
-<h2>Your booking</h2>
+<h3>Your booking for a superpower</h3>
 
-<h3><%=@booking.start_date %></h2>
+<h2><%=@booking.superpower.name%></h2>
   <%= cl_image_tag @booking.superpower.photo, height: 300, width: 400, crop: :fill %>
   <br>
-  <p>From<%= @booking.start_date%> to <%= @booking.end_date%></p>
-  <p>Price per day:<%= @booking.superpower.price%> </p>
-  <p>Total price: <%#=@booking.total_price%></p>
+  <br>
+  <p>From <%= @booking.start_date%> to <%= @booking.end_date%></p>
+  <p>Price per day:<%= @booking.superpower.price%> euros</p>
+  <p>Total price: <%=@booking.total_price%> euros</p>
 
 
 
-<h4><%= link_to "Confirm booking", superpowers_path, class: "btn btn-primary" %></h4>
+<%= link_to "Confirm booking", superpowers_path, class: "btn btn-primary btn-block" %>
 
-<h4><%= link_to "Back to the list", superpowers_path, class: "btn btn-primary" %></h4>
+</div>
+</div>
