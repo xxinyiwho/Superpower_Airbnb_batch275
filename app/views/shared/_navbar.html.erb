@@ -1,4 +1,21 @@
-<div class="navbar sticky-top navbar-lewagon">
-    <%= link_to "Home", root_path, class: "btn btn-light special" %>
-    <%= link_to "Post your superpower", new_superpower_path, class: "btn btn-primary" %>
-</div>
+
+ <div class="navbar-all sticky-top">
+    <%= link_to "Home", root_path %>
+    <ul>
+      <li><%= link_to "Create new", new_superpower_path %></li>
+      <% if user_signed_in? %>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://images.unsplash.com/photo-1548260435-f3e7ec40e513?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Dashboard</a>
+          <a class="dropdown-item" href="#"><%= link_to "Log out", destroy_user_session_path, method: :destroy %></a>
+        </div>
+      </li>
+      <% else %>
+      <li><%= link_to "Log in", new_user_registration_path %></li>
+      <% end %>
+    </ul>
+  </div>
+
+
+
