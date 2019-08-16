@@ -1,0 +1,39 @@
+
+.container-dashboard {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+ h2 {
+  font-weight: bolder;
+ }
+}
+
+.card-booking {
+  box-shadow: 0 1px 1px 0 rgba(0,3,36,0.28);
+  border: 1px gray;
+  padding: 20px;
+  margin-top: 20px;
+img {
+  height: 200px;
+  width: auto;
+  margin-bottom: 10px;
+}
+}
+
+.card-superpower {
+  box-shadow: 0 1px 1px 0 rgba(0,3,36,0.28);
+  border: 1px gray;
+  padding: 20px;
+  margin-top: 20px;
+img {
+  height: 200px;
+  width: auto;
+  margin-bottom: 10px;
+}
+}
+
+.card-superpower a {
+  color: #293A47;
+  font-size: 18px;
+  font-weight: bolder;
+}
