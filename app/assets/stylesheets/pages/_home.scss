@@ -1,50 +1,33 @@
-#flexible-form {
-    display: -webkit-box;
-    display: flex;
-    background-color: white;
-    margin: 70px 230px 32px 230px;
-    box-shadow: 5px 7px #8888880D;
-    .body {
-  background-color: #F8F8FF;
+.home-form {
+.form { padding: 16px 12px 16px 18px;
 }
-h3 {
-  width: 340px;
-    font-size: 1.75rem;
-    color: white;
-    opacity: 0.5;
+ h3 {
+    padding-bottom: 15px;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+.btn {
+padding: 12px;
+font-size: 18px;
+width: 140px;
+margin-top: 15px;
 }
-.container-new {
-    margin-right: 50px !important;
-    width: 500px !important;
-    padding: 0px 0px 16px 0px !important;
-    background-color: white !important;
+.btn-outline-primary {
+padding: 12px 12px 12px 14px;
+font-size: 18px;
+width: 140px;
+margin-top: 15px;
 }
 .form-group {
-  margin-bottom: 0px;
+  margin-bottom: 18px;
+  margin-right: 4px !important;
+  margin-left: 4px !important;
 }
-.signup {
-  margin-top: 30px;
-  margin-left: 100px;
-  width: 300px;
- }
- .file-option {
-  padding: 0px 0px 0px 0px !important;
- }
- .btn {
-   margin: 14px 0px 0px 0px !important;
- }
-
- .label {
-  display: inline-block;
-  margin-bottom: 0px !important;
-  margin-top: 11px !important;
+.banner-content {
+  width: 360px;
 }
+.simple_form {
+  margin-bottom: 25px;
 }
-
-.coloured-side {
-  padding: 418px 130px 0 10px;
-  background-image: url("https://images.unsplash.com/photo-1531270794133-e17fd309885c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
