@@ -5,7 +5,7 @@ url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :
 <br>
 <div class="container">
   <div class="content">
-   <div class="info within-content banner-content-show margin-right-for-content" id="background-color-is">
+   <div class="info within-content banner-content-show margin-right-for-content" id="background-show-color-is">
     <div class="showpowername">
       <h1><%= @superpower.name  %></h1>
     </div>
@@ -16,11 +16,11 @@ url('<%= cl_image_path @superpower.photo.url, height: 1800, width: 1080, crop: :
      <p>"Magic has to be fire. Strong, ferocious and hot. Burn the plains, scatter the ash, scorch the air, envelop everything in an infernal blaze. Crimson mystical flames that never go out. As inextinguishable as an everlasting sun."</p>
    </div>
    <br>
-   <div class="editdelete">
-   <ul>
-    <li><%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-outline-primary delete-button" %></li>
-    <li><%= link_to "Edit", edit_superpower_path(@superpower), class: "btn" %></li>
-  </ul>
+   <div class="showeditdelete">
+   <!-- <ul> -->
+    <%= link_to "Edit", edit_superpower_path(@superpower), class: "btn btn-outline-primary" %>
+    <%= link_to "Delete superpower", superpower_path(@superpower), method: :delete, data: { confirm: "are you sure?" }, class: "btn btn-outline-danger delete-button" %>
+  <!-- </ul> -->
 
    </div>
 </div>
