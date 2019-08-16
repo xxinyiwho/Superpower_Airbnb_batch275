@@ -1,15 +1,16 @@
 
+
 .navbar {
- flex-grow: 0;
- justify-content: space-between;
- align-items: start;
-img {
-height: 40px;
-}
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: start;
+  img {
+    height: 40px;
+  }
 }
 
 .navbar ul {
-margin-top: 12px;
+  margin-top: 12px;
 }
 
 .navbar li {
@@ -19,8 +20,9 @@ margin-top: 12px;
 }
 
 .navbar a {
-  color: white;
-  padding: 12px;
+  color: black;
+  opacity: 0.8;
+  padding: 14px;
   &.special {
     color: black;
   }
@@ -29,24 +31,27 @@ margin-top: 12px;
 .navbar a:hover {
   text-decoration: none;
   background-color: white;
-  color: black;
-
+  color: black
 }
 
 .navbar-all {
- flex-grow: 0;
- justify-content: space-between;
- align-items: start;
- display: flex;
- border-bottom: 1px solid #f1f1f1;
- padding: 8px 16px;
- img {
-height: 40px;
-}
+
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  flex-grow: 0;
+  justify-content: space-between;
+  align-items: start;
+  display: flex;
+  border-bottom: 1px solid #f1f1f1;
+  padding-left: 16px;
+  padding-right: 16px;
+  img {
+    height: 40px;
+  }
 }
 
 .navbar-all ul {
-  margin-top: 12px;
+  margin-top: 16px;
+  margin-right: 20px;
 
 }
 
@@ -58,7 +63,8 @@ height: 40px;
 
 .navbar-all a {
   color: black;
-  padding: 12px;
+  opacity: .8;
+  padding: 14px;
   &.special {
     color: black;
   }
@@ -68,5 +74,4 @@ height: 40px;
   text-decoration: none;
   background-color: #f4f4f4;
   color: black;
-
 }

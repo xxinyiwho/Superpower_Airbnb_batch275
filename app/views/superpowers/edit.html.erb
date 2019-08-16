@@ -1,1 +1,18 @@
-edit.html.erb
+<div class="flexible-form">
+  <div class="coloured-side">
+    <h3>Rent out your superpower!</h3>
+  </div>
+  <div class="container-new">
+  <div class="signup" style="margin-top: 30px;">
+    <%= simple_form_for(@superpower) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :address %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.submit "create power", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+</div>
