@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
   #   @booking = Booking.new
   # end
 
+  def index
+    @bookings = Booking.all
+  end
+
   def create
     @booking = Booking.new(booking_strong_params)
     @superpower = Superpower.find(params[:superpower_id])
@@ -32,7 +36,13 @@ class BookingsController < ApplicationController
   def update
     @booking = Booking.find(params[:id])
     @booking.update(booking_strong_params)
-    @booking.status = 'confirmed'
+    redirect_to root_path
+  end
+
+  def accept_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "Confirmed"
+    @booking.save
     redirect_to root_path
   end
 
