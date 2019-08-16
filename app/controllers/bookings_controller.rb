@@ -43,7 +43,7 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = "Confirmed"
     @booking.save
-    redirect_to root_path
+    redirect_to dashboard_path
   end
 
   def destroy
