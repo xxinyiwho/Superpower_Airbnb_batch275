@@ -3,6 +3,7 @@
   <div class="cards">
     <% @superpowers.each do |superpower| %>
     <div class="card-product">
+
       <div class="powerimg">
         <% if superpower.photo.url %>
         <%= link_to superpower_path(superpower) do %>
@@ -15,11 +16,13 @@
 
       <%#= cl_image_tag @superpower.photo, height: 300, width: 400, crop: :fill %>
       <div class="card-product-infos">
-        <h3><%= link_to superpower.name, superpower_path(superpower) %></h5>
+        <div class="name-price">
+          <h3><%= link_to superpower.name, superpower_path(superpower) %></h3>
+          <p><%= superpower.price %>€/day</p>
+        </div>
         <%= superpower.description %>
-        <br>
-        <%= superpower.price %>€/day
       </div>
+
     </div>
     <% end %>
   </div>
