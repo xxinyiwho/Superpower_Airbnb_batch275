@@ -3,9 +3,14 @@
   width: 100%;
   text-align: center;
 
-  .h3 {
-    margin-top: 30px !important;
+  .confirmation-h3 {
+    margin-top: 30px;
+    opacity: 0.7;
   }
+
+/*     .confirmation-h2 {
+    opacity: 0.7;
+  } */
 
   .confirmation-card {
   margin: auto;
@@ -26,14 +31,19 @@
   p {
     text-align: center;
   }
-  ul {
+  .confirmation-list ul {
     padding: 50px;
     list-style-type: none;
+
   }
-  li {
+  .confirmation-list li {
     font-size: 16px;
     padding-top: 10px;
   }
+
+   .confirmation-list li.bold {
+     font-weight: bold;
+   }
 
   .btn {
   display: block;
