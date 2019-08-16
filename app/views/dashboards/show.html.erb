@@ -1,34 +1,37 @@
 <div class="container-dashboard">
 
   <div class="superpowers">
-    <h2>My Superpowers</h1>
+    <h2>My Superpowers</h2>
       <% if @superpowers.nil? %>
       <%= link_to "Create a superpower", new_superpower_path %>
       <% else %>
-      <div class="card-superpower">
         <% @superpowers.each do |superpower| %>
 
-        <div class="powerimg">
+      <div class="card-superpower">
+        <h4><%= link_to superpower.name, superpower_path(superpower) %></h4>
+
           <% if superpower.photo.url %>
           <%= cl_image_tag superpower.photo %>
           <% end %>
 
           <div class="descp">
-            <%= link_to superpower.name, superpower_path(superpower) %>
-            <br>
-            <%= superpower.description %>
-            <br>
-            <%= superpower.price %>€/day
+
+
+            <p><%= superpower.description %></p>
+
+            <p><%= superpower.price %>€/day</p>
           </div>
+
         </div>
         <% end %>
       </div>
       <% end %>
-    </div>
+
+
 
 
     <div class="bookings">
-      <h2>My Bookings</h1>
+      <h2>My Bookings</h2>
         <% if @bookings.nil? %>
         <%= link_to "Hey, do you want to rent a super power?", superpowers_path %>
         <% else %>
@@ -37,7 +40,8 @@
           <h4><%=b.superpower.name %></h4>
           <%= cl_image_tag b.superpower.photo, height: 300, width: 400, crop: :fill %>
           <br>
-          <p>From<%= b.start_date%> to <%= b.end_date%></p>
+          <br>
+          <p>From <%= b.start_date%> to <%= b.end_date%></p>
           <p>Price per day: <%= b.superpower.price%> €</p>
           <p>Total price: <%= b.total_price %> €</p>
         </div>
