@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   resources :bookings, only: [:show]
 
   get "/dashboard", to: "dashboards#show"
+  patch "/bookings/:id", to: "bookings#accept_booking", as: "/accept"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

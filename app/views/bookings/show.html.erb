@@ -4,19 +4,21 @@
 <h3>Your booking for a superpower</h3>
 
 <h2><%=@booking.superpower.name%></h2>
+<div class="confirmation-card">
   <%= cl_image_tag @booking.superpower.photo, height: 300, width: 400, crop: :fill %>
-  <br>
-  <br>
-  <p>From <%= @booking.start_date%> to <%= @booking.end_date%></p>
-  <p>Price per day:<%= @booking.superpower.price%> euros</p>
-  <p>Total price: <%=@booking.total_price%> euros</p>
+    <br>
+    <br>
+    <div>
+      <ul>
+      <li>From <%= @booking.start_date%> to <%= @booking.end_date%></li>
+      <li>Price per day: <%= @booking.superpower.price%> euros</li>
+      <li>Total price: <%=@booking.total_price%> euros</li>
+      </ul>
 
-
-
-<%#= link_to "Confirm booking", superpowers_path, class: "btn btn-primary btn-block" %>
-
-<input type="button" value="submit" onclick= <%= "alert('Congratulations, you have succesfully booked a superpower!')" %>>
-
+      <%= link_to "Confirm booking", accept_path, method: :patch, action: :accept_booking, :data => {:confirm => 'Congratulations, you have succesfully booked a superpower!'}, class: "btn btn-primary btn-block" %>
+    </div>
+<!-- <input type="button" value="submit" onclick= <%= "alert('Congratulations, you have succesfully booked a superpower!')" %>> -->
+</div>
 </div>
 </div>
 </div>
