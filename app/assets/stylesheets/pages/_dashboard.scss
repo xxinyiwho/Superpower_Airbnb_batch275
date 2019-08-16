@@ -5,6 +5,7 @@
   margin-top: 30px;
  h2 {
   font-weight: bolder;
+  text-align: center;
  }
 }
 
@@ -19,6 +20,9 @@ img {
   margin-bottom: 10px;
 }
 }
+.card-booking h4 {
+  font-weight: bolder;
+}
 
 .card-superpower {
   box-shadow: 0 1px 1px 0 rgba(0,3,36,0.28);
@@ -27,13 +31,26 @@ img {
   margin-top: 20px;
 img {
   height: 200px;
-  width: auto;
-  margin-bottom: 10px;
+  width: 266px;
+  margin-bottom: 30px;
 }
 }
 
 .card-superpower a {
-  color: #293A47;
-  font-size: 18px;
+  color: black;
+  font-size: 24px;
   font-weight: bolder;
+  text-decoration: none;
 }
+
+.card-superpower a:hover {
+  color: #1932A0;
+}
+
+.card-superpower p {
+
+}
+
+
+
+
