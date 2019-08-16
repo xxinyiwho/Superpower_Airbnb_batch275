@@ -1,28 +1,30 @@
 <div class="banner">
   <div class="navbar sticky-top">
-    <%= link_to root_path do %>
-    <img src="https://static.thenounproject.com/png/2729312-200.png" alt="">
+    <div class="logo">
+     <%= link_to root_path do %>
+     <img src="https://static.thenounproject.com/png/2729312-200.png" alt="">
+     <% end %>
+   </div>
+
+   <ul>
+    <li><%= link_to "Create new", new_superpower_path %></li>
+    <li><%= link_to "Log in", new_user_registration_path %></li>
+  </ul>
+</div>
+
+<div class="container">
+  <div class="banner-content">
+    <h3>Book your superpower and be magical today!</h3>
+    <%= simple_form_for :search, url: superpowers_path, method: :get do |f| %>
+    <%= f.input :keyword, label: "What superpower you are looking for?" %>
+    <%= f.input :start_date, as: :date %>
+    <%= f.input :end_date, as: :date %>
+    <%= f.submit "see all power", class: "btn btn-outline-primary" %>
+    <%= f.submit "search", class: "btn btn-primary" %>
     <% end %>
-
-    <ul>
-      <li><%= link_to "Create new", new_superpower_path %></li>
-      <li><%= link_to "Log in", new_user_registration_path %></li>
-    </ul>
   </div>
 
-  <div class="container">
-    <div class="banner-content">
-      <h3>Book your superpower and be magical today!</h3>
-      <%= simple_form_for :search, url: superpowers_path, method: :get do |f| %>
-      <%= f.input :keyword, label: "What superpower you are looking for?" %>
-      <%= f.input :start_date, as: :date %>
-      <%= f.input :end_date, as: :date %>
-      <%= f.submit "see all power", class: "btn btn-outline-primary" %>
-      <%= f.submit "search", class: "btn btn-primary" %>
-      <% end %>
-    </div>
-
-  </div>
+</div>
 </div>
 
 
