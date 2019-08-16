@@ -20,6 +20,16 @@
             <p><%= superpower.description %></p>
 
             <p><%= superpower.price %>€/day</p>
+
+            <div class="edit-delete">
+              <ul>
+                 <li><%= link_to "Edit", edit_superpower_path(superpower), class: "btn btn-outline-primary buttoneditfordashboard" %></li>
+              <li><%= link_to "Delete", superpower_path(superpower), method: :delete, data: { confirm: "are you sure?" }, class: "fa fa-trash destroy_dose buttondeletefordashboard" %></li>
+              </ul>
+
+            </div>
+
+
           </div>
 
         </div>
@@ -44,7 +54,8 @@
           <p>From <%= b.start_date%> to <%= b.end_date%></p>
           <p>Price per day: <%= b.superpower.price%> €</p>
           <p>Total price: <%= b.total_price %> €</p>
-        </div>
+          <%= link_to "Delete", booking_path(b), method: :delete, data: { confirm: "are you sure?" }, class: "fa fa-trash destroy_dose" %>
+          </div>
         <% end %>
         <% end %>
       </div>
