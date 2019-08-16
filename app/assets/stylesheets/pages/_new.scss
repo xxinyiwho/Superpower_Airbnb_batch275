@@ -1,42 +1,47 @@
-
-.new_flexible-form {
-    display: -webkit-box;
-    display: flex;
-    background-color: white;
-    margin: 70px 251px 70px 80px;
-    box-shadow: 5px 7px #8888880D;
- }
-
-.new_coloured-side {
-  padding: 120px 130px 0 120px;
-  background-image: url("https://images.unsplash.com/photo-1531270794133-e17fd309885c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=968&q=80");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.home-form {
+.form { padding: 16px 12px 16px 18px;
 }
 
-.new_body {
-  background-color: #F8F8FF;
-}
-
-.new_h3 {
-  width: 340px;
-  font-size: 3.75rem;
-}
-
-.new_container {
-    margin-right: 50px;
-    margin-left: 50px;
-    width: 500px;
-    padding: 55px 0px 10px 0px;
-}
-
-.new_form-group {
-  margin-bottom: 0px;
-}
-
-.new_input {
-  .form-control-file {
-  border-color: black;
+ h3 {
+    padding-bottom: 15px;
+    padding-top: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
+
+.btn {
+padding: 12px;
+font-size: 18px;
+width: 140px;
+margin-top: 15px;
 }
+
+.btn-outline-primary {
+padding: 12px 12px 12px 14px;
+font-size: 18px;
+width: 140px;
+margin-top: 15px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  margin-right: 4px !important;
+  margin-left: 4px !important;
+}
+
+.banner-content {
+  width: 360px;
+}
+
+.simple_form {
+  margin-bottom: 25px;
+}
+}
+
+
+
+
+
+
+
+
