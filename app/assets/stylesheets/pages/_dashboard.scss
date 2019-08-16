@@ -36,12 +36,23 @@ img {
 }
 }
 
-.card-superpower a {
+.card-superpower h4 a {
   color: black;
   font-size: 24px;
   font-weight: bolder;
   text-decoration: none;
 }
+
+// .buttoneditfordashboard{
+//   margin-top: 20px;
+//   width: 100px;
+//   text-align: center;
+// }
+
+// .fa{
+//   margin-top: 20px;
+//   margin-right: 100px;
+// }
 
 .card-superpower a:hover {
   color: #1932A0;
@@ -51,6 +62,12 @@ img {
 
 }
 
+.edit-delete li {
+  display: inline;
+  justify-content: space-between;
+  text-decoration: none;
+  padding-right: 50px;
+}
 
 
 
